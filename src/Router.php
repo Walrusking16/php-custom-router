@@ -109,11 +109,7 @@ class Router {
 
 		$parsed_url = parse_url($_SERVER['REQUEST_URI']);
 
-		if(isset($parsed_url['path'])){
-			$path = $parsed_url['path'];
-		}else{
-			$path = '/';
-		}
+        $path = $parsed_url['path'] ?? '/';
 
 		$temp = str_replace($_SERVER["DOCUMENT_ROOT"], "", str_replace("\\", "/", getcwd()));
 
