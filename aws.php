@@ -7,8 +7,7 @@ require "src/Uploader.php";
 
 $aws = new Router();
 
-$aws->prefix("/imgserver");
-
+$aws->prefix("/aws");
 
 // If not in dev mode then require api key to be added to request
 $aws->middleware(function (RouterContext $ctx) {
